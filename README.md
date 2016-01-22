@@ -2,8 +2,13 @@
 
 A test of glide (https://github.com/Masterminds/glide) adding transitive dependencies.
 
+Install:
+```
+go get -v -u github.com/dmitris/deptest4glide
+```
+
 Glide appears to include more dependencies into glide.lock and the vendor/ directory than needed for a build.
-The test program in this directory only needs golang.org/x/net (and its subpackage golang.org/x/net/atom) to be built and run - as shown in the log of 'go install -v -x' included in the go_install_log.txt file.  `go list` shows the following dependencies:
+The toy program in this directory only needs golang.org/x/net (and its subpackage golang.org/x/net/atom) to be built and run - as shown in the log of 'go install -v -x' included in the go_install_log.txt file.  `go list` shows the following dependencies:
 ```
 $ go list -e -f '{{join .Deps "\n"}}' | xargs go list -f '{{if not .Standard}}{{.ImportPath}}{{end}}'
 golang.org/x/net/html
