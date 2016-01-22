@@ -4,6 +4,6 @@ imports:
 - name: golang.org/x/net
   version: 2e9cee70ee697e0a2ef894b560dda50dec7dff58
   subpackages:
-  - atom
   - html
+  - html/atom
 devImports: []
