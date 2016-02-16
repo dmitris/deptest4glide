@@ -3,6 +3,4 @@ import:
 - package: github.com/dmitris/deptesthuge
   subpackages:
   - deptestsmall
-- package: golang.org/x/net
-  subpackages:
-  - html
+
